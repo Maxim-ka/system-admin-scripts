@@ -1,0 +1,54 @@
+--------------------  2026-09-17 21:44:36  -----------------------
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       382Mi       923Mi       3.9Mi       748Mi       1.5Gi
+Swap:             0B          0B          0B
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           380M  948K  379M   1% /run
+/dev/sda1       8.6G  2.6G  6.0G  30% /
+tmpfs           949M     0  949M   0% /dev/shm
+efivarfs        128M   32K  128M   1% /sys/firmware/efi/efivars
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           949M     0  949M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+/dev/sda13      989M  150M  772M  17% /boot
+/dev/sda15      105M  6.3M   99M   7% /boot/efi
+none            1.0M     0  1.0M   0% /run/credentials/systemd-networkd.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           190M  8.0K  190M   1% /run/user/1001
+tmpfs           190M  8.0K  190M   1% /run/user/1000
+none            1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
+
+
+ 21:44:36 up  2:48,  2 users,  load average: 0.12, 0.13, 0.09
+----------------------------------------------------------------
+
+
+--------------------  2026-09-17 21:44:46  -----------------------
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       384Mi       921Mi       3.9Mi       748Mi       1.5Gi
+Swap:             0B          0B          0B
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           380M  948K  379M   1% /run
+/dev/sda1       8.6G  2.6G  6.0G  30% /
+tmpfs           949M     0  949M   0% /dev/shm
+efivarfs        128M   32K  128M   1% /sys/firmware/efi/efivars
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           949M     0  949M   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+/dev/sda13      989M  150M  772M  17% /boot
+/dev/sda15      105M  6.3M   99M   7% /boot/efi
+none            1.0M     0  1.0M   0% /run/credentials/systemd-networkd.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           190M  8.0K  190M   1% /run/user/1001
+tmpfs           190M  8.0K  190M   1% /run/user/1000
+none            1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
+
+
+ 21:44:46 up  2:49,  2 users,  load average: 0.10, 0.12, 0.09
+----------------------------------------------------------------
+
+

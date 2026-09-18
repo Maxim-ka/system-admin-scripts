@@ -1,22 +1,38 @@
 #!/usr/bin/env bash
 
 readonly LOG_NAME="monitor.log"
-readonly DELAY=20
-readonly EXPECTATION=0.5
+readonly DELAY=10
+readonly EXPECTATION=1
+readonly MAX_TIME=120
 
 > "$LOG_NAME"
 
-delay(){
-    for ((i=0; i<DELAY; i++)); do
-        if read -t "$EXPECTATION" -n 1 -s; then
-            echo -e "Результат в \033[0;32m$LOG_NAME\033[0m"
-            exit 0
-        fi
-    done 
+if [ -t 0 ]; then IS_TTY=true; else IS_TTY=false; fi
+
+out(){
+    echo -e "Результат в \033[0;32m$LOG_NAME\033[0m"
 }
 
-echo -e "\033[0;33mДля завершения нажать любую клавишу\033[0m"
-while true; do
+delay(){
+    if [ "$IS_TTY" == "true" ]; then 
+        for ((i=0; i<DELAY; i++)); do
+            if read -t "$EXPECTATION" -n 1 -s; then
+                out
+                exit 0
+            fi
+        done
+    else 
+        sleep $((DELAY * EXPECTATION)) 
+    fi 
+}
+
+if [ "$IS_TTY" == "true" ]; then 
+   echo -e "\033[0;33mДля завершения нажать любую клавишу\033[0m"
+else
+   START_TIME=$(date +%s)
+fi
+
+while [[ "$IS_TTY" == "true" ]] || (( $( date +%s ) - START_TIME <= MAX_TIME )); do
     (
         date "+--------------------  %Y-%m-%d %H:%M:%S  -----------------------"
         free -h
@@ -30,3 +46,4 @@ while true; do
     delay
 done
 
+if [ "$IS_TTY" != "true" ]; then out; fi 

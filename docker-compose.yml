@@ -1,0 +1,7 @@
+services:
+    app:
+        build: .
+        volumes:
+            - /var/log:/var/log:ro
+        stdin_open: true
+        tty: true

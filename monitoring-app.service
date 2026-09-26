@@ -1,0 +1,11 @@
+[Unit]
+Description=monitoring-app service
+After=docker.service
+Requires=docker.service
+
+[Service]
+ExecStart=docker start -a monitoring-app
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
